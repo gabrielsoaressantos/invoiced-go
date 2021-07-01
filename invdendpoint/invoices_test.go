@@ -182,7 +182,7 @@ func TestUnMarshalInvoiceObject(t *testing.T) {
 		t.Fatal("Draft is incorrect")
 	}
 
-	if so.Closed {
+	if *so.Closed {
 		t.Fatal("Closed is incorrect")
 	}
 
