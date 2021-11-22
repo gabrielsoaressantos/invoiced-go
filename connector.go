@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Invoiced/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
 )
 
 const (

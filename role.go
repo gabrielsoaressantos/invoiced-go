@@ -1,8 +1,8 @@
 package invdapi
 
 import (
-"strconv"
-"github.com/Invoiced/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
+	"strconv"
 )
 
 type Role struct {
@@ -17,9 +17,8 @@ func (c *Connection) NewRole() *Role {
 	return &Role{c, role}
 }
 
-
 func (c *Role) Retrieve(id int64) (*Role, error) {
-	endpoint := invdendpoint.RoleEndpoint+ "/" + strconv.FormatInt(id, 10)
+	endpoint := invdendpoint.RoleEndpoint + "/" + strconv.FormatInt(id, 10)
 
 	role := new(Role)
 
@@ -62,5 +61,3 @@ NEXT:
 
 	return roles, nil
 }
-
-

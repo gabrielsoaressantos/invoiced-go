@@ -3,7 +3,7 @@ package invdapi
 import (
 	"strconv"
 
-	"github.com/Invoiced/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
 )
 
 type Event struct {

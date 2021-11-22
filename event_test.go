@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/Invoiced/invoiced-go/invdendpoint"
-	"github.com/Invoiced/invoiced-go/invdmockserver"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdmockserver"
 )
 
 func TestEvent_ListAll(t *testing.T) {

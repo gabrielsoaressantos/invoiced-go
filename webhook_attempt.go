@@ -1,7 +1,7 @@
 package invdapi
 
 import (
-	"github.com/Invoiced/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
 	"strconv"
 )
 
@@ -48,12 +48,12 @@ NEXT:
 
 func (c *WebhookAttempt) ReAttempt(webhookId int64) error {
 
-		endpoint := invdendpoint.WebhookEndpoint + "/" + strconv.FormatInt(webhookId, 10) + "/retries"
+	endpoint := invdendpoint.WebhookEndpoint + "/" + strconv.FormatInt(webhookId, 10) + "/retries"
 
-		err := c.create(endpoint, nil, nil)
-		if err != nil {
-			return err
-		}
-
-		return  nil
+	err := c.create(endpoint, nil, nil)
+	if err != nil {
+		return err
 	}
+
+	return nil
+}

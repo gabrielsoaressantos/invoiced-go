@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/Invoiced/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
 )
 
 type Payment struct {
@@ -15,8 +15,8 @@ type Payment struct {
 type Payments []*Payment
 
 func (c *Connection) NewPayment() *Payment {
-	 p := new(invdendpoint.Payment)
-	return &Payment{c,  p}
+	p := new(invdendpoint.Payment)
+	return &Payment{c, p}
 }
 
 func (c *Payment) Count() (int64, error) {

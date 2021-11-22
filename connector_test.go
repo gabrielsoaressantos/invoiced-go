@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-import "github.com/Invoiced/invoiced-go/invdendpoint"
+import "github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
 
 func TestParseRawRelation(t *testing.T) {
 	s := "          rel=\"       self     \"                           "

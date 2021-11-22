@@ -1,8 +1,8 @@
 package invdapi
 
 import (
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
 	"strconv"
-	"github.com/Invoiced/invoiced-go/invdendpoint"
 )
 
 type Notification struct {
@@ -104,5 +104,3 @@ NEXT:
 
 	return notifications, nil
 }
-
-

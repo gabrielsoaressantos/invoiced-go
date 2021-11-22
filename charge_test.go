@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Invoiced/invoiced-go/invdendpoint"
-	"github.com/Invoiced/invoiced-go/invdmockserver"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdmockserver"
 )
 
 func TestCreateCharge(t *testing.T) {

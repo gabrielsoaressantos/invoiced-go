@@ -1,7 +1,7 @@
 package invdapi
 
 import (
-	"github.com/Invoiced/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
 	"net/url"
 	"strconv"
 	"strings"
@@ -118,9 +118,8 @@ func (c *User) SetUserEmailFrequency(userEmailFrequency string, id int64) (*User
 	apiErr := c.update(endpoint, userRequest, userResp)
 
 	if apiErr != nil {
-		return nil,apiErr
+		return nil, apiErr
 	}
-
 
 	userResp.Connection = c.Connection
 
@@ -130,12 +129,8 @@ func (c *User) SetUserEmailFrequency(userEmailFrequency string, id int64) (*User
 func (c *User) SendInvite(id int64) error {
 	endpoint := invdendpoint.UsersEndpoint + "/" + strconv.FormatInt(id, 10) + "/invites"
 
-
-
 	userRequest := new(invdendpoint.UserInviteRequest)
 	userRequest.Id = id
-
-
 
 	apiErr := c.create(endpoint, userRequest, nil)
 
@@ -143,22 +138,21 @@ func (c *User) SendInvite(id int64) error {
 		return apiErr
 	}
 
-
 	return nil
 }
 
 func (c *User) GenerateRegistrationURL() string {
 	regURl := ""
 
-	if strings.Contains(c.Connection.baseUrl,"sandbox") {
+	if strings.Contains(c.Connection.baseUrl, "sandbox") {
 		regURl = "https://app.sandbox.invoiced.com/register"
 	} else {
 		regURl = "https://app.invoiced.com/register"
 	}
 
-	u,_ := url.Parse(regURl)
+	u, _ := url.Parse(regURl)
 	q := u.Query()
-	q.Add("email",c.User.Email)
+	q.Add("email", c.User.Email)
 	q.Add("first_name", c.User.FirstName)
 	q.Add("last_name", c.User.LastName)
 	u.RawQuery = q.Encode()

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Invoiced/invoiced-go/invdutil"
+	"github.com/gabrielsoaressantos/invoiced-go/invdutil"
 )
 
 func TestUnMarshalEventObject(t *testing.T) {

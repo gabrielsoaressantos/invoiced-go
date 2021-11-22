@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Invoiced/invoiced-go/invdendpoint"
-	"github.com/Invoiced/invoiced-go/invdmockserver"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdmockserver"
 )
 
 func TestSubscriptionCreate(t *testing.T) {
@@ -311,7 +311,7 @@ func TestSubscription_List(t *testing.T) {
 	}
 
 	if !reflect.DeepEqual(invoiceResp[0].Subscription, mockResponse) {
-		t.Fatal("Error Messages Do Not Match Up",invoiceResp[0].Subscription,"apple",mockResponse,reflect.DeepEqual(invoiceResp[0].Subscription, mockResponse))
+		t.Fatal("Error Messages Do Not Match Up", invoiceResp[0].Subscription, "apple", mockResponse, reflect.DeepEqual(invoiceResp[0].Subscription, mockResponse))
 
 	}
 }

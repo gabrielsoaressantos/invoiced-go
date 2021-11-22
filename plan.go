@@ -2,7 +2,7 @@ package invdapi
 
 import (
 	"errors"
-	"github.com/Invoiced/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
 	"strings"
 )
 
@@ -110,7 +110,7 @@ func (c *Plan) ListAllSubNumber(filter *invdendpoint.Filter, sort *invdendpoint.
 
 	endpoint = addFilterAndSort(endpoint, filter, sort)
 
-	if strings.Contains(endpoint,"?") {
+	if strings.Contains(endpoint, "?") {
 		endpoint = endpoint + "&include=num_subscriptions"
 	} else {
 		endpoint = endpoint + "?include=num_subscriptions"

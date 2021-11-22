@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/Invoiced/invoiced-go/invdendpoint"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
 )
 
 type Invoice struct {
@@ -185,7 +185,6 @@ func (c *Invoice) ListAllInvoicesEndDate(filter *invdendpoint.Filter, sort *invd
 func (c *Invoice) ListAllInvoicesStartEndDate(filter *invdendpoint.Filter, sort *invdendpoint.Sort, startDate, endDate int64) (Invoices, error) {
 	url := invdendpoint.InvoiceEndpoint
 	url = addFilterAndSort(url, filter, sort)
-
 
 	if startDate > 0 {
 		startDateString := strconv.FormatInt(startDate, 10)

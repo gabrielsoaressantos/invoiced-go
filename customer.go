@@ -2,8 +2,8 @@ package invdapi
 
 import (
 	"errors"
+	"github.com/gabrielsoaressantos/invoiced-go/invdendpoint"
 	"strconv"
-	"github.com/Invoiced/invoiced-go/invdendpoint"
 )
 
 type Customer struct {
@@ -131,7 +131,6 @@ func (c *Customer) Retrieve(id int64) (*Customer, error) {
 func (c *Customer) ListAll(filter *invdendpoint.Filter, sort *invdendpoint.Sort) (Customers, error) {
 	endpoint := invdendpoint.CustomerEndpoint
 	endpoint = addFilterAndSort(endpoint, filter, sort)
-
 
 	customers := make(Customers, 0)
 
