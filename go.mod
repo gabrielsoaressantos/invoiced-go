@@ -1,3 +1,3 @@
-module github.com/Invoiced/invoiced-go
+module github.com/gabrielsoaressantos/invoiced-go
 
 go 1.16
